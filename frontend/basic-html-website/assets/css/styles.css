@@ -259,4 +259,136 @@ button:active {
   header {
     padding-bottom: 0;
   }
+
+}
+
+:target {
+  animation: highlight 2s ease-in-out;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: var(--accent-hover-color);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Header, Footer, Main を囲む */
+header, footer, main {
+  border: 2px solid var(--border-color); /* 線の色にテーマカラーを適用 */
+  border-radius: 5px; /* 角を少し丸める */
+  padding: 1rem; /* 内側の余白を追加 */
+  margin-bottom: 1rem; /* 下に間隔を追加 */
+}
+
+/* flex-wrapper 内の各 section を囲む */
+.flex-wrapper > section {
+  border: 1px solid var(--border-color); /* 線の色を薄めに */
+  border-radius: 5px; /* 角を少し丸める */
+  padding: 1rem; /* 内側の余白 */
+  margin: 1rem; /* セクション間の間隔 */
+}
+
+/* Optional: hover 時に強調表示 */
+.flex-wrapper > section:hover {
+  border-color: var(--accent-color); /* アクセントカラーで強調 */
+  box-shadow: 0 0 10px var(--accent-color); /* 輪郭を目立たせる影を追加 */
+}
+
+/* カテゴリー全体を囲む */
+.category {
+  border: 2px solid var(--border-color); /* カテゴリーを囲む線 */
+  border-radius: 8px; /* 角を少し丸める */
+  margin-bottom: 2rem; /* カテゴリー間の間隔 */
+  padding: 1rem; /* 内側の余白 */
+  background-color: var(--background-color); /* テーマに合わせた背景色 */
+}
+
+/* プロジェクトごとに囲む */
+.category ul li {
+  border: 1px solid var(--accent-color); /* プロジェクトごとの線 */
+  border-radius: 5px; /* 角を丸める */
+  margin-bottom: 1rem; /* プロジェクト間の余白 */
+  padding: 1rem; /* 内側の余白 */
+  background-color: var(--background-color); /* テーマに合わせた背景色 */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+/* プロジェクトのホバー効果 */
+.category ul li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ホバー時の影 */
+  border-color: var(--accent-hover-color); /* 線の色を強調 */
+}
+
+/* header, footer を囲む */
+header, footer {
+  border: 2px solid var(--border-color); /* 線を追加 */
+  border-radius: 8px; /* 角を丸める */
+  padding: 1rem; /* 内側の余白 */
+  margin-bottom: 1rem; /* 他要素との間隔 */
+}
+
+/* h2 タイトルの装飾 */
+.category h2 {
+  margin-bottom: 1rem; /* タイトル下に余白 */
+  color: var(--text-color); /* テーマに合わせた文字色 */
+  border-bottom: 2px solid var(--border-color); /* 下線 */
+  padding-bottom: 0.5rem; /* 下線とタイトルの間隔 */
+}
+
+/* h3 プロジェクトタイトルの装飾 */
+.category ul li h3 a {
+  font-size: 1.2rem;
+  color: var(--accent-color); /* アクセントカラー */
+  text-decoration: none; /* 下線を除去 */
+}
+
+.category ul li h3 a:hover {
+  text-decoration: underline; /* ホバー時に下線 */
+}
+
+/* 教育セクション全体を囲む */
+.education {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--background-color);
+}
+
+/* 各コース項目を囲む */
+.education ul li {
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--background-color);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* 各コース名のリンクスタイル */
+.education ul li a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.education ul li a:hover {
+  text-decoration: underline;
+}
+
+/* コース説明テキスト */
+.education ul li p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+/* ホバー効果 */
+.education ul li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-hover-color);
 }
