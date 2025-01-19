@@ -154,9 +154,13 @@ class TestTaskTracker(unittest.TestCase):
         self.assertNotIn("Task 2", cm.output[0])  # "Task 2" はリストに含まれない
 
 if __name__ == "__main__":
+    # スクリプトファイルが存在するディレクトリに移動
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    # カレントディレクトリを表示
+    print(f"Current Directory: {os.getcwd()}")
     # テストスイートを収集
     suite = unittest.defaultTestLoader.discover(".", pattern="test_*.py")
     
     # カスタムランナーで実行
-    runner = CSVTestRunner(verbosity=2, output_csv="./test/result_unit/test_summary.csv", coverage_report="./test/result_unit/test_coverage.txt")
+    runner = CSVTestRunner(verbosity=2, output_csv="test/result_unit/test_summary.csv", coverage_report="test/result_unit/test_coverage.txt")
     runner.run(suite)

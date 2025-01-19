@@ -165,11 +165,3 @@ task-tracker/
 - より洗練されたエラーハンドリング
 
 ---
-
-## ライセンス
-このプロジェクトはMITライセンスの下で公開されています。
-
----
-
-## 貢献
-バグ報告や新機能の提案は、[Issues](https://github.com/m-miyawaki-m/task-tracker-cli/issues)ページから行ってください。プルリクエストも歓迎します！

@@ -2,6 +2,8 @@ import json
 import sys
 import logging
 from datetime import datetime
+import os
+
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 
 FILE_NAME = "tasks.json"
@@ -151,4 +153,8 @@ def main():
         logging.info("Unknown command. Available commands are: add, update, delete, mark-in-progress, mark-done, list")
 
 if __name__ == "__main__":
+    # スクリプトファイルが存在するディレクトリに移動
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    # カレントディレクトリを表示
+    print(f"Current Directory: {os.getcwd()}")
     main()
