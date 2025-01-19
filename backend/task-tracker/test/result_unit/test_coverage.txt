@@ -1,7 +1,7 @@
 Name                   Stmts   Miss  Cover
 ------------------------------------------
 custom_runner.py          44     39    11%
-task_tracker.py          113     63    44%
-test_task_tracker.py      96     37    61%
+task_tracker.py          116     66    43%
+test_task_tracker.py      98     39    60%
 ------------------------------------------
-TOTAL                    253    139    45%
+TOTAL                    258    144    44%

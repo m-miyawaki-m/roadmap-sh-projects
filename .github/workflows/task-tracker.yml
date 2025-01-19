@@ -1,0 +1,42 @@
+name: Python Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # リポジトリをチェックアウト
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Python をセットアップ
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.13
+
+    # 必要なパッケージをインストール
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install coverage
+
+    # テストを実行
+    - name: Run tests
+      run: |
+        cd backend/task-tracker
+        python -m unittest discover -s . -p "test_task_tracker.py"
+
+    # テスト結果を確認し保存
+    - name: Save test coverage
+      if: always()
+      run: |
+        mkdir -p test/result_unit
+        cp test/result_unit/test_coverage.txt $GITHUB_WORKSPACE/test_coverage.txt || true
+        cp test/result_unit/test_summary.csv $GITHUB_WORKSPACE/test_summary.csv || true
