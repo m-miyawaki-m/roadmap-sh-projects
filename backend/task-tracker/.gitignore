@@ -1,0 +1,58 @@
+# Python用のキャッシュとコンパイル済みファイル
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 環境設定関連
+.env
+.venv/
+venv/
+ENV/
+env/
+*.env
+*.env.*
+
+# IDEやエディタ関連の設定ファイル
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# ログファイル
+*.log
+
+# テスト関連
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# バージョン管理関連
+*.orig
+
+# ビルド関連ファイル
+*.egg-info/
+.eggs/
+build/
+dist/
+wheels/
+*.egg
+
+# ドキュメント
+*.rst~
+
+# デプロイ関連
+*.bak
+*.swp
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# macOS固有
+.DS_Store
+
+# Windows固有
+Thumbs.db
